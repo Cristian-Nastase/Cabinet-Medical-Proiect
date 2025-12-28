@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,60 +8,204 @@
 <body>
     <header class="header">
         <div class="header__info">
-            <div class="header__phone">
-                <svg class="phone__logo">
-
-                </svg>
-                <a class="phone__link"href="tel:+40770533975">+40770533975</a>
-            </div>
-
-            <div class="header__email">
-                <svg class="email__logo">
-
-                </svg>
-                <a class="email__link"href="mailto:+40770533975">+40770533975</a>
-            </div>
-
-            <div class="header__internari">
-                <svg class="internari__logo">
-
-                </svg>
-                <p class="internari__text">Urgențe 24/7</p>
-            </div>
+            <a class="phone__link"href="tel:+40770533975">+40770533975</a>
+            <a class="email__link"href="mailto:+40770533975">+40770533975</a>
+            <p class="internari__text">Urgențe 24/7</p>
         </div>
 
         <div class="header__menu">
-            <picture class="menu__logo">
-                <source />
-                <img src="" alt="logo" width="" height="" loading="lazy">
+            <picture class="header__logo">
+                <img src="/assets/images/logo.svg" alt="logo" width="32" height="32" loading="lazy"/>
             </picture>
             <nav class="menu__nav">
                 <ul class="nav__links">
                     <li class="nav__link">
-                        <a href="">Acasă</a>
+                        <a href="#acasa">Acasă</a>
                     </li>
                     <li class="nav__link">
-                        <a href="">Despre noi</a>
+                        <a href="#despre-noi">Despre noi</a>
                     </li>
                     <li class="nav__link">
-                        <a href="">Servicii</a>
+                        <a href="#servicii">Servicii</a>
                     </li>
                     <li class="nav__link">
-                        <a href="">Tarife</a>
+                        <a href="#tarife">Tarife</a>
                     </li>
                     <li class="nav__link">
-                        <a href="">Contact</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>
-            <button class="header__button" type="button">Programeaza-te</button>
+            <a class="header__programare" href="#formular-programare">Programeaza-te</a>
         </div>
 
     </header>
 
     <main class="main">
-        <section class="main_carousel"></section>
+        <section id="acasa" class="main_carousel">
+            <div class="carousel__element">
+                <h1 class="c-element__header">Lorem, ipsum dolor.</h1>
+                <p class="c-element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, recusandae.</p>
+                <picture class="c-element__picture">
+                    <img src="/assets/images/imagine-tehnologie.jpg" alt="tehnologie" width="600" height="400" loading="lazy"> 
+                </picture>
+            </div>
 
+            <div class="carousel__element">
+                <h1 class="c-element__header">Lorem ipsum dolor sit amet.</h1>
+                <p class="c-element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos fugiat delectus!</p>
+                <picture class="c-element__picture">
+                    <img src="/assets/images/imagine-pacient-fericit.jpg" alt="pacient" width="600" height="400" loading="lazy"> 
+                </picture>
+            </div>
+
+            <div class="carousel__element">
+                <h1 class="c-element__header">Lorem ipsum dolor sit.</h1>
+                <p class="c-element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae.</p>
+                <picture class="c-element__picture">
+                    <img src="/assets/images/imagine-proces.jpg" alt="proces" width="540" height="360" loading="lazy"> 
+                </picture>
+            </div>
+        </section>
+
+        <article class="info">
+            <header class="info__header">
+                <button class="i-header__button" type="button" aria-label="Despre noi">Despre noi</button>
+                <button class="i-header__button" type="button" aria-label="Servicii">Serivicii</button>
+                <button class="i-header__button" type="button" aria-label="Tarife">Tarife</button>
+            </header>
+            <div class="info__container">
+                <section id="despre-noi" class="despre">
+                    <h1 class="despre__header">Lorem ipsum dolor sit, elit. Sequi, consequatur.</h1>
+                    <p class="despre__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique illum quo quidem dolorum ab?</p>
+                </section>
+                <section id="servicii" class="servicii">
+                    <h1 class="servicii__header">Lorem ipsum dolor sit amet.</h1>
+                    <p class="servicii__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, provident?</p>
+                </section>
+                <section id="tarife" class="tarife">
+                    <h1 class="tarife__header">Lorem ipsum dolor sit amet.</h1>
+                    <p class="tarife__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi deserunt inventore sunt!</p>
+                </section>
+            </div>
+        </article>
+
+        <section id="intrebari" class="main__faq">
+            <details class="faq__question">
+                <summary class="question__text">Lorem, ipsum dolor.</summary>
+                <p class="question__answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, nihil.</p>
+            </details>
+
+            <details class="faq__question">
+                <summary class="question__text">Lorem ipsum dolor sit amet.</summary>
+                <p class="question__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nostrum dolor reprehenderit aliquam, quis voluptate. Perferendis et neque assumenda!</p>
+            </details>
+
+            <details class="faq__question">
+                <summary class="question__text">Lorem ipsum dolor sit amet consectetur.</summary>
+                <p class="question__answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </details>
+        </section>
+
+        <section id="contact" class="main__contact">
+            <address>
+                Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </address>
+            <picture class="contact__main">
+                <img src="/assets/images/imagine-programare.jpg" alt="contact" width="384" height="216" loading="lazy">
+            </picture>
+        </section>
+
+
+        <section id="formular-programare" class="main__form">
+            <form>
+                <fieldset name="date-pacient">
+                    <label for="nume-complet">Nume complet *</label>
+                    <input type="text" id="nume-complet" name="nume-complet">
+    
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email">
+    
+                    <label for="telefon">Telefon *</label>
+                    <input type="tel" id="telefon" name="telefon">
+                    
+                    <label for="urgenta">Urgența *</label>
+                    <select id="urgenta" name="urgenta">
+                        <option>Selectează urgența</option>
+                        <option>Urgent (în 24h)</option>
+                        <option>Semi-urgent (2-3 zile)</option>
+                        <option>Lorem ipsum dolor sit amet.</option>
+                        <option>Lorem ipsum dolor sit amet.</option>
+                    </select>
+                </fieldset>
+                
+                <label for="serviciu">Serviciu dorit *</label>
+                <select id="serviciu" name="serviciu">
+                    <option>Selecteaza serviciul</option>
+                    <option>Lorem, ipsum dolor.</option>
+                    <option>Lorem ipsum dolor sit.</option>
+                    <option>Lorem ipsum dolor sit amet consectetur.</option>
+                </select>
+
+                <label for="descriere">Descrierea Simptomelor / Mesaj *</label>
+                <textarea id="descriere" name="descriere" placeholder="salut"></textarea>
+
+                <label id="consintamant">Esti de acord</label>
+                <input type="checkbox" id="consintamant" name="consintamant" required>
+
+                <button class="form__submit" type="submit">Trimite programre</button>
+            </form>
+        </section>
     </main>
+    
+    <footer class="footer">
+        <section class="footer__info">
+            <div class="f-info__descriere">
+                <picture>
+                    <img src="/assets/images/logo.svg" alt="logo" width="32" height="32" loading="lazy">
+                </picture>
+                <h2 class="descriere__header">Lorem ipsum dolor sit.</h2>
+                <p class="descriere__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, aut.</p>
+            </div>
+            <div class="f-info__nav">
+                <h2 class="f-nav__header">Lorem ipsum dolor sit amet.</h2>
+                <ul class="f-nav__linkuri">
+                    <li class="f-nav__link">
+                        <a href="#acasa">Acasă</a>
+                    </li>
+                    <li class="f-nav__link">
+                        <a href="#despre-noi">Despre noi</a>
+                    </li>
+                    <li class="f-nav__link">
+                        <a href="#servicii">Servicii</a>
+                    </li>
+                    <li class="f-nav__link">
+                        <a href="#tarife">Tarife</a>
+                    </li>
+                    <li class="f-nav__link">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="f-info__resurse">
+                <h2 class="resurse__header">Lorem, ipsum.</h2>
+                <ul class="resurse__linkuri">
+                    <li class="resurse__link">
+                        <a href="https://youtube.com">Lorem ipsum dolor sit.</a>
+                    </li>
+                    <li class="resurse__link">
+                        <a href="https://youtube.com">Lorem ipsum dolor sit.</a>
+                    </li>
+                    <li class="resurse__link">
+                        <a href="https://youtube.com">Lorem ipsum dolor sit.</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <p class="footer_copyright">&copy;Lorem ipsum dolor sit amet.</p>
+    </footer>
 </body>
 </html>
