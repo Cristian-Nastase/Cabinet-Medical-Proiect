@@ -1,0 +1,153 @@
+@use '../util/mixin' as m;
+
+.footer
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: var(--spacing-400);
+    padding: var(--spacing-400) var(--spacing-200);
+
+    background: var(--albastru-500);
+
+    gap:var(--spacing-600);
+
+    color: white;
+
+    &__info
+    {
+       width: 90%;
+       display: flex;
+       flex-direction: column; 
+
+       gap:var(--spacing-400);
+        
+       justify-content: space-evenly;
+
+       padding-bottom: var(--spacing-400);
+       border-bottom: 1px solid var(--albastru-50);
+
+       @include m.breakpoint('large')
+       {
+            flex-direction: row;
+       }
+
+       .f-info__descriere
+       {
+            display: flex;
+            flex-direction: column;
+
+            gap: var(--spacing-200);
+
+            color: white;
+
+            @include m.breakpoint('large')
+            {
+                width: fit-content;
+            }
+
+            &__header
+            {
+                @include m.dm-paragraph;
+                text-decoration: underline;
+            }
+            &__text
+            {
+                @include m.sans-paragraph;
+                font-size: var(--small-paragraph);
+            }
+       }
+
+       .f-info__nav
+       {
+            display: flex;
+            flex-direction: column;
+
+            color: white;
+            gap: var(--spacing-200);
+
+            &__header
+            {
+                text-decoration: underline;
+                @include m.dm-paragraph;
+            }
+
+            &__linkuri
+            {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-100);
+                @include m.sans-paragraph;
+                font-size: var(--small-paragraph);
+            }
+
+            &__link
+            {
+                a, a:visited
+                {
+                    color: white;
+                    transition: color 0.2s;
+                }
+
+                a:hover
+                {
+                    color: var(--albastru-300);
+                }
+            }
+       }
+
+       .f-info__resurse
+       {
+            display: flex;
+            flex-direction: column;
+
+            gap: var(--spacing-200);
+
+            color: white;
+            &__header
+            {
+                @include m.dm-paragraph;
+                text-decoration: underline;
+            }
+
+            &__linkuri
+            {
+                list-style: none;
+
+                display: flex;
+                flex-direction: column;
+
+                gap: var(--spacing-100);
+            }
+
+            &__link
+            {
+                a, a:visited
+                {
+                    @include m.sans-paragraph;
+                    font-size: var(--small-paragraph);
+
+
+                    color: white;
+                    transition: 0.1s;
+                }
+
+                a:hover
+                {
+                    color: var(--albastru-300);
+                }
+            }
+       }
+    }
+
+    &__copyright
+    {
+        text-align: center;
+        @include m.dm-paragraph;
+        font-size: var(--small-paragraph);
+    }
+}

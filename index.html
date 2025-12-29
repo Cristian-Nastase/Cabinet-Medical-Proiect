@@ -74,7 +74,13 @@
                         <p class="c-element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos fugiat delectus!</p>
                     </div>
                     <picture class="c-element__picture">
-                        <img src="/assets/images/imagine-pacient-fericit.jpg" alt="pacient" width="600" height="400" loading="lazy"> 
+                        <source
+                        srcset="/assets/images/imagine-pacient-fericit.webp"
+                        media="width >= 60em"
+                        width="1200"
+                        height="800"
+                        />
+                        <img src="/assets/images/webp/mobile/imagine-pacient-fericit.webp" alt="pacient" width="600" height="400" loading="lazy"> 
                     </picture>
                 </div>
     
@@ -186,48 +192,57 @@
     <footer class="footer">
         <section class="footer__info">
             <div class="f-info__descriere">
-                <picture>
-                    <img src="/assets/images/logo.svg" alt="logo" width="32" height="32" loading="lazy">
+                <h2 class="f-info__descriere__header">Lorem ipsum dolor sit.</h2>
+                <p class="f-info__descriere__text">Cu dragoste, pentru medicină.</p>
+                <picture class="f-info__descriere__logo">
+                    <img src="/assets/images/logo-alb.svg" alt="logo" width="32" height="32" loading="lazy">
                 </picture>
-                <h2 class="descriere__header">Lorem ipsum dolor sit.</h2>
-                <p class="descriere__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, aut.</p>
             </div>
             <div class="f-info__nav">
-                <h2 class="f-nav__header">Lorem ipsum dolor sit amet.</h2>
-                <ul class="f-nav__linkuri">
-                    <li class="f-nav__link">
+                <h2 class="f-info__nav__header">Linkuri</h2>
+                <ul class="f-info__nav__linkuri">
+                    <li class="f-info__nav__link">
                         <a href="#acasa">Acasă</a>
                     </li>
-                    <li class="f-nav__link">
+                    <li class="f-info__nav__link">
                         <a href="#despre-noi">Despre noi</a>
                     </li>
-                    <li class="f-nav__link">
+                    <li class="f-info__nav__link">
                         <a href="#servicii">Servicii</a>
                     </li>
-                    <li class="f-nav__link">
+                    <li class="f-info__nav__link">
                         <a href="#tarife">Tarife</a>
                     </li>
-                    <li class="f-nav__link">
+                    <li class="f-info__nav__link">
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
             <div class="f-info__resurse">
-                <h2 class="resurse__header">Lorem, ipsum.</h2>
-                <ul class="resurse__linkuri">
-                    <li class="resurse__link">
+                <h2 class="f-info__resurse__header">Lorem, ipsum.</h2>
+                <ul class="f-info__resurse__linkuri">
+                    <li class="f-info__resurse__link">
                         <a href="https://youtube.com">Lorem ipsum dolor sit.</a>
                     </li>
-                    <li class="resurse__link">
+                    <li class="f-info__resurse__link">
                         <a href="https://youtube.com">Lorem ipsum dolor sit.</a>
                     </li>
-                    <li class="resurse__link">
+                    <li class="f-info__resurse__link">
                         <a href="https://youtube.com">Lorem ipsum dolor sit.</a>
                     </li>
                 </ul>
+                <div class="f-info__resurse__social">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="/assets/images/facebook-alb.svg" alt="facebook" width="32" height="32" loading="lazy">
+                    </a>
+                    
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="/assets/images/instagram-alb.svg" alt="instagram" width="32" height="32" loading="lazy">
+                    </a>
+                </div>
             </div>
         </section>
-        <p class="footer_copyright">&copy;Lorem ipsum dolor sit amet.</p>
+        <p class="footer_copyright"> Copyright &copy; 2020 - Ortodent</p>
     </footer>
 </body>
 </html>

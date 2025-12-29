@@ -2,6 +2,11 @@
 @forward 'util';
 @forward 'sections';
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 body
 {
     min-height: 100lvh;
@@ -10,4 +15,5 @@ body
     display: flex;
     flex-direction: column;
     background-color: var(--albastru-50);
+
 }

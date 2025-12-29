@@ -1,0 +1,136 @@
+@use '../util/mixin' as m;
+
+.main__carousel
+{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    .carousel__buttons
+    {
+        position: absolute;
+        z-index: 5;
+        bottom: var(--spacing-100);
+
+        padding: var(--spacing-100);
+
+        display: flex;
+
+        gap: var(--spacing-200);
+        
+        background: hsl(from black h s l / 50%);
+        border-radius: 10px;
+
+        .carousel__button
+        {
+            appearance: none;
+
+            width: var(--spacing-300);
+            height: auto;
+            aspect-ratio: 1/1;
+
+            border-radius: 50%;
+            
+            background-color: var(--albastru-400);
+
+            transition: background-color 0.5s;
+        }
+
+        .carousel__button:checked
+        {
+            background-color: var(--albastru-50);
+        }
+    }
+
+    .carousel__slides
+    {
+        width: 100%;
+        height: 20rem;
+    
+        display: flex;
+    
+        overflow-x:auto;
+        overflow-y: hidden;
+    
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar
+        {
+            :hover
+            {
+                cursor: auto;
+            }
+            display: none;
+        }
+    
+        .carousel__element
+        {
+            position: relative;
+            
+            flex-shrink: 0;
+            
+            width: 100%;
+            height: 100%;
+    
+            scroll-snap-align: start;
+    
+
+            .c-element__text
+            {
+                position: absolute;
+                top: 30%;
+                left: 10%;
+
+                display: flex;
+                flex-direction: column;
+
+                width: min-content;
+                height: fit-content;
+
+                
+                gap: var(--spacing-200);
+                
+                .c-element__header
+                {
+                    padding: var(--spacing-100) var(--spacing-200);
+                    width: max-content;
+                    background-color: white;
+                    @include m.dm-header;
+                    font-size: var(--small-paragraph);
+                }
+        
+                .c-element__paragraph
+                {
+                    padding: var(--spacing-200);
+                    width: 30ch;
+                    background-color: white;
+                    @include m.sans-paragraph;
+                    font-size: var(--small-paragraph);
+                }
+                
+            }
+    
+            .c-element__picture
+            {
+                width: 100%;
+                height: 100%;
+    
+                img
+                {
+                    width: 100%;
+                    height: 100%;
+    
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
