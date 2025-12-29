@@ -51,29 +51,42 @@
     </header>
 
     <main class="main">
-        <section id="acasa" class="main_carousel">
-            <div class="carousel__element">
-                <h1 class="c-element__header">Lorem, ipsum dolor.</h1>
-                <p class="c-element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, recusandae.</p>
-                <picture class="c-element__picture">
-                    <img src="/assets/images/imagine-tehnologie.jpg" alt="tehnologie" width="600" height="400" loading="lazy"> 
-                </picture>
+        <section id="acasa" class="main__carousel">
+            <div class="carousel__buttons">
+                    <input class="carousel__button" type="radio" name="slider">
+                    <input class="carousel__button" type="radio" name="slider">
+                    <input class="carousel__button" type="radio" name="slider">
             </div>
-
-            <div class="carousel__element">
-                <h1 class="c-element__header">Lorem ipsum dolor sit amet.</h1>
-                <p class="c-element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos fugiat delectus!</p>
-                <picture class="c-element__picture">
-                    <img src="/assets/images/imagine-pacient-fericit.jpg" alt="pacient" width="600" height="400" loading="lazy"> 
-                </picture>
-            </div>
-
-            <div class="carousel__element">
-                <h1 class="c-element__header">Lorem ipsum dolor sit.</h1>
-                <p class="c-element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae.</p>
-                <picture class="c-element__picture">
-                    <img src="/assets/images/imagine-proces.jpg" alt="proces" width="540" height="360" loading="lazy"> 
-                </picture>
+            <div class="carousel__slides">
+                <div class="carousel__element" id="slide-1">
+                    <div class="c-element__text">
+                        <h1 class="c-element__header">Lorem, ipsum dolor.</h1>
+                        <p class="c-element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, recusandae.</p>
+                    </div>
+                    <picture class="c-element__picture">
+                        <img src="/assets/images/imagine-tehnologie.jpg" alt="tehnologie" width="600" height="400" loading="lazy"> 
+                    </picture>
+                </div>
+    
+                <div class="carousel__element" id="slide-2">
+                    <div class="c-element__text">
+                        <h1 class="c-element__header">Lorem ipsum dolor sit amet.</h1>
+                        <p class="c-element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos fugiat delectus!</p>
+                    </div>
+                    <picture class="c-element__picture">
+                        <img src="/assets/images/imagine-pacient-fericit.jpg" alt="pacient" width="600" height="400" loading="lazy"> 
+                    </picture>
+                </div>
+    
+                <div class="carousel__element" id="slide-3">
+                    <div class="c-element__text">
+                        <h1 class="c-element__header">Lorem ipsum dolor sit.</h1>
+                        <p class="c-element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae.</p>
+                    </div>
+                    <picture class="c-element__picture">
+                        <img src="/assets/images/imagine-proces.jpg" alt="proces" width="540" height="360" loading="lazy"> 
+                    </picture>
+                </div>
             </div>
         </section>
 
@@ -130,7 +143,7 @@
 
 
         <section id="formular-programare" class="main__form">
-            <form>
+            <form method="post">
                 <fieldset name="date-pacient">
                     <label for="nume-complet">Nume complet *</label>
                     <input type="text" id="nume-complet" name="nume-complet">

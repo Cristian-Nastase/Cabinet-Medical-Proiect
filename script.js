@@ -4,3 +4,4 @@ menuButton.addEventListener("click", function()
 {
     menuButton.toggleAttribute("working");
 })
+
