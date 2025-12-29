@@ -1,0 +1,55 @@
+
+// Media query breakpoints
+
+$sizes: 
+(
+    "medium":48em,
+    "large":62em,
+    "xlarge":90em,
+);
+
+@mixin breakpoint($size)
+{
+    @media (min-width: map-get($sizes, $size))
+    {
+        @content;    
+    }
+}
+
+// Text mixins
+
+@mixin sans-paragraph
+{
+    font-family: 'PublicSans';
+    font-weight: 300;
+    font-style: normal;
+    font-size: clamp(1rem, 0.5rem + 2vw ,1.6rem);
+}
+
+@mixin dm-paragraph
+{
+    @include sans-paragraph;
+    font-family: 'DMSerifText';
+}
+
+@mixin sans-header
+{
+    font-family: 'PublicSans';
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(2.2rem, 1.5rem + 2vw, 3rem);
+}
+
+@mixin dm-header
+{
+    @include sans-header;
+    font-family: 'DMSerifText';
+}
+
+// Utility Classes
+
+@mixin hidden
+{
+    display: none;
+    position: absolute;
+}

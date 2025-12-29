@@ -3,40 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/dist/style.css">
+    <script src="script.js" defer></script>
     <title>Cabinet - Boli infectioase</title>
 </head>
 <body>
     <header class="header">
         <div class="header__info">
             <a class="phone__link"href="tel:+40770533975">+40770533975</a>
-            <a class="email__link"href="mailto:+40770533975">+40770533975</a>
+            <a class="email__link"href="mailto:email@email.com">email@email.com</a>
             <p class="internari__text">Urgențe 24/7</p>
         </div>
-
-        <div class="header__menu">
-            <picture class="header__logo">
-                <img src="/assets/images/logo.svg" alt="logo" width="32" height="32" loading="lazy"/>
-            </picture>
-            <nav class="menu__nav">
-                <ul class="nav__links">
-                    <li class="nav__link">
-                        <a href="#acasa">Acasă</a>
-                    </li>
-                    <li class="nav__link">
-                        <a href="#despre-noi">Despre noi</a>
-                    </li>
-                    <li class="nav__link">
-                        <a href="#servicii">Servicii</a>
-                    </li>
-                    <li class="nav__link">
-                        <a href="#tarife">Tarife</a>
-                    </li>
-                    <li class="nav__link">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <a class="header__programare" href="#formular-programare">Programeaza-te</a>
+        
+        <div class="header__container">
+            <button class="h-menu__button" type="button" aria-label="Buton navigare">Meniu</button>
+            <div class="header__menu">
+                <div class="menu__company">
+                    <picture class="h-company__logo">
+                        <img src="/assets/images/logo.svg" alt="logo" width="32" height="32" loading="lazy"/>
+                    </picture>
+                    <h2 class="h-company__header">Lorem, ipsum</h2>
+                </div>
+                <nav class="menu__nav">
+                    <ul class="nav__links">
+                        <li class="nav__link">
+                            <a href="#acasa">Acasă</a>
+                        </li>
+                        <li class="nav__link">
+                            <a href="#despre-noi">Despre noi</a>
+                        </li>
+                        <li class="nav__link">
+                            <a href="#servicii">Servicii</a>
+                        </li>
+                        <li class="nav__link">
+                            <a href="#tarife">Tarife</a>
+                        </li>
+                        <li class="nav__link">
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="header__programare" href="#formular-programare">Programează-te</a>
+            </div>
         </div>
 
     </header>
@@ -153,7 +162,7 @@
                 <label for="descriere">Descrierea Simptomelor / Mesaj *</label>
                 <textarea id="descriere" name="descriere" placeholder="salut"></textarea>
 
-                <label id="consintamant">Esti de acord</label>
+                <label for="consintamant">Esti de acord</label>
                 <input type="checkbox" id="consintamant" name="consintamant" required>
 
                 <button class="form__submit" type="submit">Trimite programre</button>
