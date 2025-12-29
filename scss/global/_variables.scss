@@ -1,0 +1,63 @@
+:root
+{
+    // Culori
+    
+    --albastru-950: hsl(216 100% 7%);
+    --albastru-500: hsl(239 94% 19%);
+    --albastru-400: hsl(201 100% 36%);
+    --albastru-300: hsl(190 100% 42%);
+    --albastru-200: hsl(189 75% 75%);
+    --albastru-100: hsl(190 77% 88%);
+    --albastru-50: hsl(205 86% 94%);
+
+    // Spacing
+    
+    --spacing-100: .5rem;
+    --spacing-200: 1rem;
+    --spacing-300:  1.5rem;
+    --spacing-400: 2rem;
+    --spacing-500: 2.5rem;
+    --spacing-600: 3rem;
+    --spacing-800: 4rem;
+    --spacing-1000: 5rem;
+
+    // Text
+    --small-paragraph: clamp(0.8rem, 0.4rem + 2vw ,1.2rem);
+    --very-small-paragraph: clamp(0.6rem, 0.4rem + 1vw, 1rem);
+}
+
+@font-face {
+    font-family: 'PublicSans';
+    src: 
+    url(/assets/fonts/Public_Sans/PublicSans-VariableFont_wght.woff2) format('woff2'),
+    url(/assets/fonts/Public_Sans/PublicSans-VariableFont_wght.ttf) format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans';
+    src: 
+    url(/assets/fonts/Public_Sans/PublicSans-Italic-VariableFont_wght.woff2) format('woff2'),
+    url(/assets/fonts/Public_Sans/PublicSans-Italic-VariableFont_wght.ttf) format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DMSerifText';
+    src: 
+    url('/assets/fonts/DM_Serif_Text/DMSerifText-Regular.woff2') format('woff2'),
+    url('/assets/fonts/DM_Serif_Text/DMSerifText-Regular.ttf') format(truetype);
+    
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DMSerifText';
+    src: 
+    url('/assets/fonts/DM_Serif_Text/DMSerifText-Italic.woff2') format('woff2'),
+    url('/assets/fonts/DM_Serif_Text/DMSerifText-Italic.ttf') format('truetype');
+
+    font-style: italic;
+}

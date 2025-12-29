@@ -1,0 +1,264 @@
+@use '../util/mixin' as m;
+
+.header
+{
+    z-index: 10;
+    position: sticky;
+    top: 0;
+
+    box-sizing: content-box;
+    width: 100%;
+    height: min-content;
+
+    display: flex;
+    flex-direction: column;
+
+    .header__info
+    {
+        position: relative;
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: min-content;
+
+        padding: var(--spacing-100) var(--spacing-200);
+        
+        background-color: var(--albastru-200);
+
+        @include m.dm-paragraph;
+        font-size: var(--very-small-paragraph);
+        
+        *
+        {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-100);
+            
+            &::before
+            {
+                content: '';
+                width: 16px;
+                height: 16px;
+
+            }
+            
+            color: var(--albastru-500);
+        }
+
+        .phone__link
+        {
+            &::before
+            {
+                background: url(/assets/images/phone.svg) center no-repeat;
+            }
+        }
+
+        .email__link
+        {
+            &::before
+            {
+                background: url(/assets/images/email.svg) center no-repeat;
+            }
+        }
+
+        .internari__text
+        {
+            &::before
+            {
+                background: url(/assets/images/clock.svg);
+            }
+        }
+    }
+
+    .header__container
+    {
+        position: relative;
+
+        .h-menu__button
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 15;
+
+            width: 32px;
+            height: 32px;
+
+            color: transparent;
+
+            background: url(/assets/images/burger.svg) center no-repeat var(--albastru-500);
+
+            border: 1px solid var(--albastru-950);
+        }
+
+        .h-menu__button[working]
+        {
+            background: url(/assets/images/close.svg) center no-repeat;
+        }
+    
+        .h-menu__button[working] + .header__menu
+        {
+            display: flex;
+        }
+        
+        @include m.breakpoint('medium')
+        {
+            .h-menu__button
+            {
+                display: none;
+            }
+    
+            .header__menu
+            {
+                display: flex;
+            }
+        }
+    
+        .header__menu
+        {
+            position: absolute;
+            
+            z-index: 10;
+            
+            display: none;
+            flex-direction: column;
+            
+            
+            
+            width: fit-content;
+            height: fit-content;
+            
+            background-color: white;
+            
+            padding: var(--spacing-200);
+            padding-top: var(--spacing-500);
+    
+            gap: var(--spacing-200);
+            
+            .menu__company
+            {
+                display: flex;
+                gap: var(--spacing-100);
+                
+                justify-content: start;
+                align-items: center;
+    
+                .h-company__header
+                {
+                    display: none;
+                }
+            }
+    
+            .menu__nav
+            {
+                scroll-behavior: smooth;
+                .nav__links
+                {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    align-items: start;
+                    justify-content: center;
+        
+                    list-style: none;
+        
+                    gap: var(--spacing-200);
+        
+                    .nav__link
+                    {
+                        a
+                        {
+                            @include m.dm-paragraph ;
+                            color: var(--albastru-500);
+                            
+                            font-size: var(--small-paragraph);
+                            
+        
+                            transition: color 0.1s;
+                        }
+        
+                        a:hover
+                        {
+                            color: var(--albastru-400);
+        
+                        }
+                    }
+                }
+    
+            }
+    
+            .header__programare
+            {
+    
+                border-radius: 20px;
+                padding: var(--spacing-100) var(--spacing-200);
+                background-color: var(--albastru-500);
+        
+                color: var(--albastru-50);
+                @include m.dm-paragraph;
+                font-size: var(--small-paragraph);
+        
+                animation: programare-buton 2s infinite;
+                
+                @keyframes programare-buton 
+                {
+                    0% {
+                      box-shadow: 
+                        inset 0px 0px 0px 2px var(--albastru-950), 
+                        0px 0px 0px 3px var(--albastru-500),
+                        0px 0px 0px 1px var(--albastru-400);
+                    }
+                    100% {
+                        box-shadow: 
+                        inset 0px 0px 0px 4px var(--albastru-500), 
+                        0px 0px 10px 1px var(--albastru-200), 
+                        0px 0px 12px 1px var(--albastru-100);
+                    }
+                }
+            }
+        }
+    
+        @include m.breakpoint('medium')
+        {   
+                .header__menu
+                {    
+                    display: flex;
+        
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    width: 100%;
+                    height: min-content;
+        
+                    padding: var(--spacing-100) var(--spacing-200);
+        
+                    gap: 0;
+        
+                    .menu__company
+                    {
+                        .h-company__header
+                        {
+                            display: block;
+        
+                            @include m.dm-paragraph;
+                            text-transform: uppercase;
+                            font-size: var(--small-paragraph);
+                        }
+                    }
+        
+                    .menu__nav
+                    {
+                        .nav__links
+                        {
+                            align-items: center;
+                            flex-direction: row;
+                        }
+                    }
+                }
+        }
+    }
+}
