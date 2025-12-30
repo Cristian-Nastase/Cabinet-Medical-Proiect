@@ -28,13 +28,12 @@
     justify-content: center;
     align-items: center;
 
-    gap: var(--spacing-1000);
+    gap: var(--spacing-600);
 
     overflow-x: hidden;
 
     hr
     {
-        margin: calc(-1 * var(--spacing-600)) 0;
 
         width: 90%;
         height: 2px;

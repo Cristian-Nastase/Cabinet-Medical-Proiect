@@ -49,15 +49,15 @@ form.addEventListener('submit', (e) =>
 
 function spawnPopUp()
 {
-    let popup = popupTemplate.content;
-    document.body.appendChild(popup);
+    let popup = popupTemplate.content.cloneNode(true);
+    document.body.appendChild(popup.cloneNode(true));
 
     const popUpButton = document.querySelector('.popup__button');
 
-    popUpButton.addEventListener("click", function()
+    popUpButton.addEventListener("click", (e) =>
     {
-        popUpButton.parentElement.toggleAttribute('disappear');
-        setTimeout(() => 
+        popUpButton.parentElement.toggleAttribute('disappear'); 
+        setTimeout( () => 
             {
                 popUpButton.parentElement.remove();
             }, 2000);

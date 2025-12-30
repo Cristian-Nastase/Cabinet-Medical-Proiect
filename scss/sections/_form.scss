@@ -56,6 +56,14 @@
                 
                 border: 1px solid var(--albastru-950);
                 border-radius: 10px;
+
+                background-color: white;
+                transition: background-color 0.5s;
+
+                &:invalid
+                {
+                    background-color: hsl(from red h s l / .2);
+                }
             }
 
             textarea
@@ -159,6 +167,7 @@
 
 .popup
 {
+    z-index: 1000;
     position: fixed;
     display: flex;
 
