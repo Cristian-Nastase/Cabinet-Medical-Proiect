@@ -108,6 +108,44 @@
         .h-menu__button[working] + .header__menu
         {
             display: flex;
+            animation: menu-appear 0.5s;
+
+            @keyframes menu-appear 
+            {
+                0% 
+                {
+                  opacity: 0;
+                  transform-origin: top center;
+                  transform: rotateX(-90deg);
+                }
+
+                5% 
+                {
+                  opacity: 1;
+                }
+                
+                80% 
+                {
+                  transform: rotateX(8deg);
+                }
+                
+                83% 
+                {
+                  transform: rotateX(6deg);
+                }
+
+                92% 
+                {
+                  transform: rotateX(-3deg);
+                }
+
+                100% 
+                {
+                  transform-origin: top center;
+                  transform: rotateX(0deg);
+                }
+            }
+            }
         }
         
         @include m.breakpoint('medium')
@@ -132,7 +170,8 @@
             display: none;
             flex-direction: column;
             
-            
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
             
             width: fit-content;
             height: fit-content;
@@ -268,4 +307,3 @@
                 }
         }
     }
-}
