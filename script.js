@@ -1,10 +1,5 @@
+// Mobile header button
 const menuButton = document.querySelector(".h-menu__button");
-
-const carousel = document.querySelector(".carousel__slides");
-let carouselScrollWidth = carousel.scrollWidth;
-let carouselOneScroll = Math.floor(carouselScrollWidth/3);
-
-const carouselButtons = document.getElementsByClassName("carousel__button");
 
 menuButton.addEventListener("click", function()
 {
@@ -13,6 +8,11 @@ menuButton.addEventListener("click", function()
 
 
 // Carousel logic, scrolls and checks what slide is it on
+const carousel = document.querySelector(".carousel__slides");
+let carouselScrollWidth = carousel.scrollWidth;
+let carouselOneScroll = Math.floor(carouselScrollWidth/3);
+
+const carouselButtons = document.getElementsByClassName("carousel__button");
 
 window.addEventListener("resize", function()
 {
@@ -35,3 +35,31 @@ for(let i = 0; i < carouselButtons.length; i++)
             carousel.scroll(parseInt(index) * carouselOneScroll, 0);
         });
     }
+
+// Form control
+const form = document.getElementById('form');
+const popupTemplate = document.getElementById('multumesc-pop-up');
+
+form.addEventListener('submit', (e) =>
+{
+    e.preventDefault();
+    form.reset();
+    spawnPopUp();
+});
+
+function spawnPopUp()
+{
+    let popup = popupTemplate.content;
+    document.body.appendChild(popup);
+
+    const popUpButton = document.querySelector('.popup__button');
+
+    popUpButton.addEventListener("click", function()
+    {
+        popUpButton.parentElement.toggleAttribute('disappear');
+        setTimeout(() => 
+            {
+                popUpButton.parentElement.remove();
+            }, 2000);
+    });
+}

@@ -28,7 +28,19 @@
     justify-content: center;
     align-items: center;
 
-    gap: var(--spacing-800);
+    gap: var(--spacing-1000);
 
-    overflow-x: hidden; 
+    overflow-x: hidden;
+
+    hr
+    {
+        margin: calc(-1 * var(--spacing-600)) 0;
+
+        width: 90%;
+        height: 2px;
+
+        background-color: var(--albastru-500);
+        border: 0;
+        border-radius: 10px;
+    }
 }
