@@ -67,9 +67,9 @@
     <main class="main">
         <section id="acasa" class="main__carousel">
             <div class="carousel__buttons">
-                    <input class="carousel__button" type="radio" name="slider">
-                    <input class="carousel__button" type="radio" name="slider">
-                    <input class="carousel__button" type="radio" name="slider">
+                    <input class="carousel__button" name="slide-1" type="radio" name="slider" role="slider" aria-roledescription="buton schimbare slide">
+                    <input class="carousel__button" name="slide-2" type="radio" name="slider" role="slider" aria-roledescription="buton schimbare slide">
+                    <input class="carousel__button" name="slide-3" type="radio" name="slider" role="slider" aria-roledescription="buton schimbare slide">
             </div>
             <div class="carousel__slides">
                 <div class="carousel__element" id="slide-1">
@@ -124,7 +124,7 @@
             <h1 class="despre__header">Lorem ipsum dolor sit, elit. Sequi, consequatur.</h1>
             <p class="despre__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique illum quo quidem dolorum ab?</p>
         </section>
-
+<!-- 
         <section class="info">
             <header class="info__header">
                 <button class="i-header__button" type="button" aria-label="Despre noi">Despre noi</button>
@@ -135,6 +135,15 @@
                 <section id="servicii" class="servicii">
                     <h1 class="servicii__header">Lorem ipsum dolor sit amet.</h1>
                     <p class="servicii__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, provident?</p>
+                    <ul class="servicii__list">
+                        <li class="servicii__item">
+                            Lorem, ipsum dolor.
+                        </li>
+                        <li class="servicii__item">
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li class="serviici"></li>
+                    </ul>
                 </section>
                 <section id="tarife" class="tarife">
                     <h1 class="tarife__header">Lorem ipsum dolor sit amet.</h1>
@@ -151,6 +160,78 @@
                         <img src="/assets/images/imagine-programare.jpg" alt="contact" width="384" height="216" loading="lazy">
                     </picture>
                 </section>
+            </div>
+        </section> -->
+
+        <section id="servicii" class="servicii">
+            <div class="servicii__background" aria-hidden="true">
+                <picture>
+                    <img src="/assets/images/webp/service_curves.png" alt="background" width="800" height="1500" loading="lazy"/>
+                </picture>
+            </div>
+            <span class="servicii__subheader">Servicii</span>
+            <h2 class="servicii__header">Consultații Medicale</h2>
+            <div class="servicii__container">
+                <div class="servicii__card">
+                    <picture class="servicii__card__picture">
+                        <img src="/assets/images/medical.svg" alt="pictograma" width="64" height="64" loading="lazy">
+                    </picture>
+                    <h2 class="servicii__card__header">Lorem, ipsum.</h2>
+                    <p class="servicii__card__paragraph">Lorem ipsum dolor sit Lorem, ipsum dolor.</p>
+                    <ul class="servicii__card__lista">
+                        <li class="servicii__card__beneficii">
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li class="servicii__card__beneficii">
+                            Lorem ipsum dolor sit.
+                        </li>
+                        <li class="servicii__card__beneficii">
+                            Lorem ipsum dolor sit amet consectetur.
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="servicii__card">
+                    <picture class="servicii__card__picture">
+                        <img src="/assets/images/medical.svg" alt="pictograma" width="64" height="64" loading="lazy">
+                    </picture>
+                    <h2 class="servicii__card__header">Lorem, ipsum.</h2>
+                    <p class="servicii__card__paragraph">Lorem ipsum dolor sit Lorem, ipsum dolor.</p>
+                    <ul class="servicii__card__lista">
+                        <li class="servicii__card__beneficii">
+                            <p>
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </li>
+                        <li class="servicii__card__beneficii">
+                            Lorem ipsum dolor sit.
+                        </li>
+                        <li class="servicii__card__beneficii">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                        </li>
+                    </ul>
+                </div>           
+                
+                <div class="servicii__card">
+                    <picture class="servicii__card__picture">
+                        <img src="/assets/images/medical.svg" alt="pictograma" width="64" height="64" loading="lazy">
+                    </picture>
+                    <h2 class="servicii__card__header">Lorem, ipsum.</h2>
+                    <p class="servicii__card__paragraph">Lorem ipsum dolor sit Lorem, ipsum dolor.</p>
+                    <ul class="servicii__card__lista">
+                        <li class="servicii__card__beneficii">
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li class="servicii__card__beneficii">
+                            Lorem ipsum dolor sit.
+                        </li>
+                        <li class="servicii__card__beneficii">
+                            Lorem ipsum dolor sit amet consectetur.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
