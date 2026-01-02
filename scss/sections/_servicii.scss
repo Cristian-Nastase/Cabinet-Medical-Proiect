@@ -83,7 +83,9 @@
     &__card
     {
         z-index: 1;
-        width: fit-content;
+
+        position: relative;
+
         display: flex;
         flex-direction: column;
 
@@ -99,8 +101,13 @@
 
         transition: transform 0.1s;
 
-        width: 25rem;
+        width: clamp(20rem, 15rem + 20vw, 30rem);
         height: fit-content;
+
+        @include m.breakpoint('medium')
+        {
+            height: 40rem;
+        }
 
         &:hover
         {
@@ -136,8 +143,6 @@
             color: var(--albastru-500);
             transition: color 0.5s;
 
-            text-wrap: nowrap;
-
             &:hover
             {
                 color: teal;
@@ -164,25 +169,8 @@
             gap:var(--spacing-200);
             list-style: none;
 
-            &:hover &::before
-            {
-                background-color: teal;
-            }
-
-            &::after
-            {
-                margin-top: var(--spacing-400);
-                content: '';
-                width: 80%;
-                height: 4px;
-                background-color: var(--albastru-500);
-
-                align-self: center;
-
-                transition: background-color 0.2s;
-            }
         }
-
+        
         &__beneficii
         {
             @include m.sans-paragraph;
@@ -190,9 +178,9 @@
 
             justify-content: start;
             align-items: center;
-
+            
             gap: var(--spacing-200);
-
+            
             &::before
             {
                 flex-shrink: 0;
@@ -203,6 +191,27 @@
                 background: url(/assets/images/check-circle.svg) center no-repeat;
                 background-size: contain;
             }
+        }
+
+        &:hover::after
+        {
+            background-color: var(--albastru-100);
+        }
+        
+        &::after
+        {
+            position: absolute;
+            margin-top: var(--spacing-400);
+            content: '';
+            width: 80%;
+            height: 4px;
+            background-color: var(--albastru-500);
+        
+            align-self: center;
+        
+            transition: background-color 0.2s;
+
+            bottom: 5px;
         }
     }
 }
