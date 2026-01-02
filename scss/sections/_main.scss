@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
 
-    gap: var(--spacing-600);
+    // gap: var(--spacing-600);
 
     overflow-x: hidden;
 
@@ -29,17 +29,6 @@
     @include m.breakpoint('large')
     {
         width: 80%;
-    }
-
-    hr
-    {
-
-        width: 90%;
-        height: 2px;
-
-        background-color: var(--albastru-500);
-        border: 0;
-        border-radius: 10px;
     }
 
     :nth-child(odd)[visible]

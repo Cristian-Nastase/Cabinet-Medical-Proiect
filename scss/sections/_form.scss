@@ -2,6 +2,8 @@
 
 .main__form
 {
+    margin-top: var(--spacing-400);
+
     width: 90%;
     padding: var(--spacing-200) 0;
 
@@ -40,6 +42,13 @@
             font-size: var(--small-paragraph);
         }
 
+        label > input:invalid,
+        label > textarea:invalid,
+        label > select:invalid
+        {
+            background-color:hsl(from red h s l /0.1);
+        }
+
         label
         {
             width: 100%;
@@ -48,6 +57,8 @@
             flex-direction: column;
             align-items: start;
             gap: var(--spacing-100);
+
+            transition: color 0.2s;
 
             input
             {
@@ -59,11 +70,6 @@
 
                 background-color: white;
                 transition: background-color 0.5s;
-
-                &:invalid
-                {
-                    background-color: hsl(from red h s l / .2);
-                }
             }
 
             textarea
@@ -98,8 +104,12 @@
             justify-content: start;
             gap: var(--spacing-100);
 
+            font-style: italic;
+
+            color: grey;
             &::before
             {
+                flex-shrink: 0;
                 content: '';
                 display: block;
 

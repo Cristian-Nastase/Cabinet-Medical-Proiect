@@ -31,9 +31,9 @@ carousel.addEventListener("scrollend", (e) =>
     let index = Math.floor(carousel.scrollLeft / carouselOneScroll); 
     for(let i = 0; i < carouselElements.length; i++)
         {
-            carouselElements[i].removeAttribute("visible");
+            carouselElements[i].removeAttribute("visible-slide");
         }
-    carouselElements[index].toggleAttribute("visible");
+    carouselElements[index].toggleAttribute("visible-slide");
     carouselButtons[index].checked = true;
 });
 
@@ -80,7 +80,6 @@ function spawnPopUp()
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => 
         {
-            console.log(entry.target);
             if(entry.isIntersecting)
                 {
                     entry.target.setAttribute("visible", '');
