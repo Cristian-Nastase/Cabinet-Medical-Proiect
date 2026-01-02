@@ -1,0 +1,77 @@
+@use '../util/mixin' as m;
+
+.despre
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--spacing-400) var(--spacing-100) var(--spacing-800);
+
+    gap:var(--spacing-400);
+    
+    &__header
+    {
+        padding: 0 var(--spacing-100);
+        @include m.dm-header;
+        color: var(--albastru-500);
+        text-align: center;
+
+        &__underline
+        {
+            text-decoration: underline;
+        }
+    }
+
+    &__paragraph
+    {
+        width: 90%;
+        @include m.sans-paragraph;
+        color: var(--albastru-950);
+        text-align: center;
+        padding: 0 var(--spacing-200);
+    }
+
+    &__grid
+    {
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+
+        display: grid;
+        grid-template-rows: reapeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        
+        gap: var(--spacing-100);
+
+        @include m.breakpoint('large')
+        {
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        &__picture
+        {
+            width: 100%;
+            height: 100%;
+
+            img
+            {
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+
+                transition: scale 0.5s;
+
+                &:hover
+                {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+}

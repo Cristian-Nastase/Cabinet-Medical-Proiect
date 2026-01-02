@@ -33,6 +33,8 @@
     url(/assets/fonts/Public_Sans/PublicSans-VariableFont_wght.ttf) format('truetype');
     font-weight: 100 900;
     font-style: normal;
+
+    font-display: swap;
 }
 
 @font-face {
@@ -42,6 +44,8 @@
     url(/assets/fonts/Public_Sans/PublicSans-Italic-VariableFont_wght.ttf) format('truetype');
     font-weight: 100 900;
     font-style: italic;
+
+    font-display: swap;
 }
 
 @font-face {
@@ -51,6 +55,7 @@
     url('/assets/fonts/DM_Serif_Text/DMSerifText-Regular.ttf') format(truetype);
     
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -60,4 +65,5 @@
     url('/assets/fonts/DM_Serif_Text/DMSerifText-Italic.ttf') format('truetype');
 
     font-style: italic;
+    font-display: swap;
 }

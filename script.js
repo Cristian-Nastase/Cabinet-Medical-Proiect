@@ -13,6 +13,7 @@ let carouselScrollWidth = carousel.scrollWidth;
 let carouselOneScroll = Math.floor(carouselScrollWidth/3);
 
 const carouselButtons = document.getElementsByClassName("carousel__button");
+const carouselElements = document.getElementsByClassName('carousel__element');
 
 window.addEventListener("resize", function()
 {
@@ -20,9 +21,19 @@ window.addEventListener("resize", function()
     carouselOneScroll = Math.floor(carouselScrollWidth / 3);
 })
 
+window.addEventListener("load", function()
+{
+    carousel.scroll(0, 0);
+})
+
 carousel.addEventListener("scrollend", (e) =>
 {
     let index = Math.floor(carousel.scrollLeft / carouselOneScroll); 
+    for(let i = 0; i < carouselElements.length; i++)
+        {
+            carouselElements[i].removeAttribute("visible");
+        }
+    carouselElements[index].toggleAttribute("visible");
     carouselButtons[index].checked = true;
 });
 
@@ -63,3 +74,22 @@ function spawnPopUp()
             }, 2000);
     });
 }
+
+// Scrolling loading
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => 
+        {
+            console.log(entry.target);
+            if(entry.isIntersecting)
+                {
+                    entry.target.setAttribute("visible", '');
+                }
+        })
+}, 
+{
+    threshold: 0.3,
+});
+
+const entriesElements = document.querySelectorAll('.main > *');
+entriesElements.forEach(el => observer.observe(el));
