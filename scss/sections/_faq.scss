@@ -11,6 +11,8 @@
     align-items: center;
     justify-content: center;
 
+    margin-bottom: var(--spacing-200);
+
     gap: var(--spacing-200);
 
     &__header
@@ -43,43 +45,9 @@
 
         &[open] > &__answer
         {
-            animation: details-extend 0.25s ease-in;
-
-            @keyframes details-extend 
-            {
-                0% 
-                {
-                  opacity: 0;
-                  transform-origin: top center;
-                  transform: rotateX(-90deg);
-                }
-
-                5% 
-                {
-                  opacity: 1;
-                }
-                
-                80% 
-                {
-                  transform: rotateX(8deg);
-                }
-                
-                83% 
-                {
-                  transform: rotateX(6deg);
-                }
-
-                92% 
-                {
-                  transform: rotateX(-3deg);
-                }
-
-                100% 
-                {
-                  transform-origin: top center;
-                  transform: rotateX(0deg);
-                }
-            }
+            animation: accordion-animation 0.25s ease-in;
+            
+           @include m.accordion-animation;
         }
 
         &__answer

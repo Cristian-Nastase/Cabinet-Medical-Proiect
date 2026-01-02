@@ -67,12 +67,12 @@
     <main class="main">
         <section id="acasa" class="main__carousel">
             <div class="carousel__buttons">
-                    <input class="carousel__button" name="slide-1" type="radio" name="slider" role="slider" aria-roledescription="buton schimbare slide">
-                    <input class="carousel__button" name="slide-2" type="radio" name="slider" role="slider" aria-roledescription="buton schimbare slide">
-                    <input class="carousel__button" name="slide-3" type="radio" name="slider" role="slider" aria-roledescription="buton schimbare slide">
+                    <input class="carousel__button" type="radio" name="carousel-slider" aria-roledescription="buton schimbare slide" checked>
+                    <input class="carousel__button" type="radio" name="carousel-slider" aria-roledescription="buton schimbare slide">
+                    <input class="carousel__button" type="radio" name="carousel-slider" aria-roledescription="buton schimbare slide">
             </div>
             <div class="carousel__slides">
-                <div class="carousel__element" id="slide-1">
+                <div class="carousel__element" id="slide-1" visible="">
                     <div class="c-element__text">
                         <h1 class="c-element__header">Lorem, ipsum dolor.</h1>
                         <p class="c-element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, recusandae.</p>
@@ -121,48 +121,27 @@
         </section>
         
         <section id="despre-noi" class="despre">
-            <h1 class="despre__header">Lorem ipsum dolor sit, elit. Sequi, consequatur.</h1>
-            <p class="despre__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique illum quo quidem dolorum ab?</p>
-        </section>
-<!-- 
-        <section class="info">
-            <header class="info__header">
-                <button class="i-header__button" type="button" aria-label="Despre noi">Despre noi</button>
-                <button class="i-header__button" type="button" aria-label="Servicii">Serivicii</button>
-                <button class="i-header__button" type="button" aria-label="Tarife">Tarife</button>
-            </header>
-            <div class="info__container">
-                <section id="servicii" class="servicii">
-                    <h1 class="servicii__header">Lorem ipsum dolor sit amet.</h1>
-                    <p class="servicii__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, provident?</p>
-                    <ul class="servicii__list">
-                        <li class="servicii__item">
-                            Lorem, ipsum dolor.
-                        </li>
-                        <li class="servicii__item">
-                            Lorem ipsum dolor sit amet.
-                        </li>
-                        <li class="serviici"></li>
-                    </ul>
-                </section>
-                <section id="tarife" class="tarife">
-                    <h1 class="tarife__header">Lorem ipsum dolor sit amet.</h1>
-                    <p class="tarife__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi deserunt inventore sunt!</p>
-                </section>
-                <section id="contact" class="main__contact">
-                    <address>
-                        Lorem ipsum dolor sit amet.
-                        Lorem ipsum dolor sit.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </address>
-                    <picture class="contact__main">
-                        <img src="/assets/images/imagine-programare.jpg" alt="contact" width="384" height="216" loading="lazy">
-                    </picture>
-                </section>
+            <h1 class="despre__header">Povestea noastră, <span class="despre__header__underline">pe scurt</span>.</h1>
+            <p class="despre__paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique illum quo quidem dolorum ab?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aut aliquam illo beatae cupiditate sapiente, neque voluptas repellat dolorem eaque!
+            </p>
+            <div class="despre__grid">  
+                <picture class="despre__grid__picture">
+                    <img src="/assets/images/webp/base/grid-1.webp" width="800" height="400" alt="poza-1" loading="">
+                </picture>
+                <picture class="despre__grid__picture">
+                    <img src="/assets/images/webp/base/grid-2.webp" width="800" height="400" alt="poza-2" loading="">
+                </picture>
+                <picture class="despre__grid__picture">
+                    <img src="/assets/images/webp/base/grid-3.webp" width="800" height="400" alt="poza-3" loading="">
+                </picture>
+                <picture class="despre__grid__picture">
+                    <img src="/assets/images/webp/base/grid-4.webp" width="800" height="400" alt="poza-4" loading="">
+                </picture>
             </div>
-        </section> -->
-
+        </section>
+        
         <section id="servicii" class="servicii">
             <div class="servicii__background" aria-hidden="true">
                 <picture>
@@ -190,7 +169,7 @@
                         </li>
                     </ul>
                 </div>
-    
+                
                 <div class="servicii__card">
                     <picture class="servicii__card__picture">
                         <img src="/assets/images/medical.svg" alt="pictograma" width="64" height="64" loading="lazy">
@@ -235,26 +214,109 @@
             </div>
         </section>
 
-        <section id="intrebari" class="main__faq">
-            <h2 class="main__faq__header">Întrebări frecvente</h2>
-            <details class="main__faq__question">
-                <summary class="main__faq__question__text">Lorem, ipsum dolor.</summary>
-                <p class="main__faq__question__answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, nihil.</p>
-            </details>
+        <section id="tarife" class="tarife">
+            <picture class="tarife__background">
+                <source 
+                srcset="/assets/images/webp/base/imagine-analiza.webp"
+                width="2066"
+                heigth="1354"
+                media="width >= 60em"/>
+                <img src="/assets/images/webp/base/imagine-analiza.webp" alt="background" width="1033" height="672" loading="lazy"> 
+            </picture>
+            <div class="tarife__info">
+                <h2 class="tarife__info__header">Prețuri normale, pentru oameni normali.</h2>
+                <p class="tarife__info__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vero, animi consequuntur eius rerum ut velit cupiditate repudiandae non necessitatibus!</p>
+                <p class="tarife__info__addnotation">* Prețurile afișate sunt doar orientative, ele pot varia în funcție de condiții obiective. <a href="">Informații GDPR privind transparența prețurilor</a></p>
+            </div>
+            <table class="tarife__tabel">
+                <caption>Tarife</caption>
+                <thead>
+                    <tr>
+                        <th>Serviciu</th>
+                        <th>Durată</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
 
-            <details class="main__faq__question">
-                <summary class="main__faq__question__text">Lorem ipsum dolor sit amet.</summary>
-                <p class="main__faq__question__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nostrum dolor reprehenderit aliquam, quis voluptate. Perferendis et neque assumenda!</p>
-            </details>
+                <tbody>
+                    <tr>
+                        <td>Analize</td>
+                        <td>30min</td>
+                        <td>100 RON</td>
+                    </tr>
+                    <tr>
+                        <td>Test rapid(HIV, SIDA, etc.)</td>
+                        <td>40min</td>
+                        <td>80 RON</td>
+                    </tr>
+                    <tr>
+                        <td>Control fizic</td>
+                        <td>30min</td>
+                        <td>200 RON</td>
+                    </tr>
+                    <tr>
+                        <td>Pachet întreg</td>
+                        <td>120min</td>
+                        <td>500 RON</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="contact" class="main__contact">
+            <details class="contact" open="">
+                <summary class="contact__question">Contact</summary>
+                <div class="contact__answer">
+                    <picture class="contact__answer__background">
+                        <img src="/assets/images/webp/service_curves.png" alt="background" width="800" height="400"> 
+                    </picture>
+                    <address class="contact__answer__address">
+                        <p class="address__location">
+                            Cabinet Medical Dr. Ion Popescu<br>
+                            Strada Exemplu, Nr. 25<br>
+                            Sector 1, București, România<br>
+                            Cod Poștal: 011111
+                        </p>
 
-            <details class="main__faq__question">
-                <summary class="main__faq__question__text">Lorem ipsum dolor sit amet consectetur.</summary>
-                <p class="main__faq__question__answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <ul class="address__date">
+                            <li class="address__date__telefon">
+                                <a href="tel:+40770533975">+40 770 533 975</a>
+                            </li>
+                            <li class="address__date__email">
+                                <a href="mailto:email@email.com">email@email.com</a>
+                            </li>
+                        </ul> 
+
+                        <div class="address__program">
+                            <h3 class="address__program__subheader">
+                                Program de lucru:
+                            </h3>
+
+                            <ul class="address__program__lista">
+                                <li>
+                                    <p>Luni - Vineri: 08:00 - 20:00</p>
+                                </li>
+                                <li>
+                                    <p>Sâmbătă: 09:00 - 14:00</p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Duminică: Închis
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </address>
+                    <picture class="contact__answer__poza">
+                        <img src="/assets/images/webp/base/locatie.webp" alt="contact" width="384" height="216" loading="lazy">
+                    </picture>
+                </div>
             </details>
         </section>
-
+        
+        
         <hr>
-
+        
         <section id="formular-programare" class="main__form">
             <h2 class="main__form__header">Formular Programare</h2>
             <form id="form" method="post" class="form">
@@ -263,7 +325,7 @@
                         Nume complet *
                         <input type="text" id="nume-complet" name="nume-complet" required>
                     </label>
-    
+                    
                     <label for="email">
                         Email *
                         <input type="email" id="email" name="email" required>
@@ -295,21 +357,21 @@
                         <option>Lorem ipsum dolor sit amet consectetur.</option>
                     </select>
                 </label>
-
+                
                 <label for="descriere">
                     Mesaj *
                     <textarea id="descriere" name="descriere" placeholder="Descrie simptomele:" required></textarea>
                 </label>
-
+                
                 <label for="consintamant">
                     Esti de acord cu 
                     <input type="checkbox" id="consintamant" name="consintamant" required>
                 </label>
-
+                
                 <button class="form__submit" type="submit">Trimite programare</button>
             </form>
         </section>
-
+        
         <template id="multumesc-pop-up">
             <div class="popup" aria-label="confirmare-programare">
                 <button class="popup__button" type="button" aria-label="inchide-mesajul-programare"></button>
@@ -317,6 +379,24 @@
                 <p class="popup__paragraph">Veți fi contactat(ă) cât de curând posibil.</p>
             </div>
         </template>
+
+        <section id="intrebari" class="main__faq">
+            <h2 class="main__faq__header">Întrebări frecvente (FAQ)</h2>
+            <details class="main__faq__question">
+                <summary class="main__faq__question__text">Lorem, ipsum dolor.</summary>
+                <p class="main__faq__question__answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, nihil.</p>
+            </details>
+    
+            <details class="main__faq__question">
+                <summary class="main__faq__question__text">Lorem ipsum dolor sit amet.</summary>
+                <p class="main__faq__question__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nostrum dolor reprehenderit aliquam, quis voluptate. Perferendis et neque assumenda!</p>
+            </details>
+    
+            <details class="main__faq__question">
+                <summary class="main__faq__question__text">Lorem ipsum dolor sit amet consectetur.</summary>
+                <p class="main__faq__question__answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </details>
+        </section>
     </main>
     
     <footer class="footer">
