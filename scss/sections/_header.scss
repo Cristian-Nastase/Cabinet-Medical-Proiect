@@ -256,13 +256,13 @@
                             display: block;
         
                             @include m.dm-paragraph;
-                            text-transform: uppercase;
+                            // text-transform: uppercase;
                             font-size: var(--small-paragraph);
                         }
                     }
         
                     .menu__nav
-                    {
+                    {>
                         .nav__links
                         {
                             align-items: center;
